@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "funda-app-6d522": {
+      "hosting": {
+        "funda-app": [
+          "funda-app-6d522"
+        ]
+      }
+    }
+  }
+}
