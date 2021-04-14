@@ -7,11 +7,13 @@ import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
-import { LoginComponent } from './login/login.component';
+import {LoginComponent} from './login/login.component';
 import firebase from 'firebase';
-import { HomeComponent } from './home/home.component';
+import {HomeComponent} from './home/home.component';
+import {FormsModule} from '@angular/forms';
 
 firebase.initializeApp(environment.firebaseConfig);
+
 @NgModule({
   declarations: [
     AppComponent,
