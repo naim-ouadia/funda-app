@@ -14,5 +14,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.afAuth.authState.subscribe(user => console.log(user));
   }
+  logOut(){
+    this.afAuth.signOut();
+  }
 
 }
