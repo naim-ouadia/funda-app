@@ -11,6 +11,8 @@ import {LoginComponent} from './login/login.component';
 import firebase from 'firebase';
 import {HomeComponent} from './home/home.component';
 import {FormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatSliderModule} from '@angular/material/slider';
 
 firebase.initializeApp(environment.firebaseConfig);
 
@@ -23,9 +25,12 @@ firebase.initializeApp(environment.firebaseConfig);
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatSliderModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    BrowserAnimationsModule
 
 
   ],

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import firebase from 'firebase';
 import * as firebaseui from 'firebaseui';
 import Config = firebaseui.auth.Config;
@@ -10,11 +10,11 @@ import {Router} from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
 
   ui = new firebaseui.auth.AuthUI(firebase.auth());
 
-  constructor(private afauth: AngularFireAuth, private router: Router) {
+  constructor() {
   }
 
   ngOnInit() {
@@ -35,5 +35,9 @@ export class LoginComponent implements OnInit {
 
     };
     this.ui.start('#firebaseui-auth-container', uiConfig);
+  }
+
+  ngOnDestroy() {
+    this.ui.delete();
   }
 }
