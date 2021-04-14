@@ -11,7 +11,6 @@ import {environment} from '../../environments/environment';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  //ui: firebaseui.auth.AuthUI | undefined;
 
   ui = new firebaseui.auth.AuthUI(firebase.auth());
 
@@ -30,13 +29,6 @@ export class LoginComponent implements OnInit {
         }
       }
     };
-    // this.ui = new firebaseui.auth.AuthUI(this.afauth);
     this.ui.start('#firebaseui-auth-container', uiConfig);
   }
-
-  /*
-    onLoginSuccessful() {
-
-  }*/
-
 }
